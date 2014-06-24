@@ -4,7 +4,7 @@ layout: post
 published: false
 ---
 
-Assuming that you are good with scala, sbt, after that have a good idea why you need this.
+Assuming that you are good with scala, sbt, after that have a good idea why you would eve want to do a plugin.
 
 ### So you want to write a plugin?!
 
@@ -57,4 +57,4 @@ Which explains that variable you have put in to `scriptedLaunchOpts`. You wouldn
 There testing is easy, we acutely wrote a task along the way, fun times!
 
 Call all tests with `scripted`.
-Or a single test with `scripted test_group/test_n`.
+To perform a single test call `scripted test_group/test_n`.
