@@ -9,9 +9,14 @@ html, body {
 h1, h2 {
     border-bottom: 1px solid #dddddd;
 }
+
 h1, h2, h3, h4, h5 {
     margin: 10px 10px;
+}
 
+ul, ol {
+    margin:0 10px 10px 0;
+    padding-left:1.5em;
 }
 
 body {
@@ -19,6 +24,9 @@ body {
     font: 13px helvetica, arial, clean, sans-serif;
     *font-size: small;
     text-align: center;
+}
+
+pre code {
 }
 
 ul.posts {
