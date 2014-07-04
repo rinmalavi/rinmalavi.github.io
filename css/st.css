@@ -4,7 +4,10 @@
 }
 
 html, body {
-    height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 10px 10px;
 }
 
 body {
@@ -20,7 +23,7 @@ ul.posts {
 
 .content {
     text-align: justify;
-    width:37em;
+    width:41em;
     margin:1em auto 1em auto;
     line-height:1.5em;
 }
@@ -54,4 +57,8 @@ a:hover {
 
 a:visited {
     color: #83c8f900;
+}
+
+#post {
+    font-family: Georgia, serif;
 }
