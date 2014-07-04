@@ -1,13 +1,11 @@
 ---
 title: SBT Plugin development (from a point of view)
 layout: post
-published: false
 ---
 
-Trying to provide my personal voyage through accepting some of the sbts ways of thinking.
+Providing my personal voyage through accepting some of the SBTs ways of thinking.
 
-Assuming that you are good with scala, sbt, after that have a good idea why you would've want a plugin.
-
+Assuming that you are good with scala, sbt, after that have a good idea why would you want a plugin.
 
 
 #### So you want to write a plugin?!
@@ -15,7 +13,6 @@ Assuming that you are good with scala, sbt, after that have a good idea why you 
     sbtPlugin := true
 
 that's it, good job there.
-
 
 
 #### Now, test stuff
@@ -36,7 +33,7 @@ ScriptedPlugin.scriptedLaunchOpts := {
   )
 }
 ```
-Those look like some variables scripted will put into JVM where it is testing your plugin. Right?
+Those look like some variables that scripted will put into a JVM where it will test your plugin. Right?
 
 #### An Actual test
 looks like this. In `src/sbt-test` make a folder within which you will add folders (don't ask just do...)
@@ -73,5 +70,5 @@ There testing is easy, we acutely wrote a task along the way, fun times!
 Call all tests with `scripted`.
 To perform a single test call `scripted test_group/test_n`.
 
-
+Scripted will now `publishLocal` your plugin and resolve it in a project it copied to /tmp/sbt-<some randoms> then run a task you called in `test` file 
 #More 2 Come
