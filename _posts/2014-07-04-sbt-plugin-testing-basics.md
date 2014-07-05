@@ -72,14 +72,20 @@ Only 3 files need to be explained here:
 
 There testing is easy, we acutely wrote a task along the way, fun times!
 
-Call all tests with `scripted`.
-To perform a single test call `scripted test_group/test_n`.
+Call all tests with 
+
+    scripted
+
+To perform a single test call 
+
+    scripted test_group/test_n
+
 
 Scripted will now `publishLocal` your plugin and resolve it in a project it copied to k`/tmp/sbt-<some randoms>` then run a task you called in `test` file.
 If your project depends on a library you are developing as a subproject, you have to publish it to so just add it to publishLocal task in your plugin project.
 
-        publishLocal <<= publishLocal dependsOn( 
-            publishLocal in yourLibraryProjectRef )
+    publishLocal <<= publishLocal dependsOn( 
+        publishLocal in yourLibraryProjectRef )
 
 
 Similarly for the resources.
@@ -87,7 +93,6 @@ Similarly for the resources.
 then if you are using some test resources you need to load them with your plugin. So plugin file now looks like this:
 
 
-        addSbtPlugin("your.groupId" % "your-app-name" % 
-            System.getProperty("plugin.version"))
-                classifier "tests" classifier "")
-
+    addSbtPlugin("your.groupId" % "your-app-name" % 
+        System.getProperty("plugin.version"))
+            classifier "tests" classifier "")

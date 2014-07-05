@@ -26,7 +26,9 @@ body {
     text-align: center;
 }
 
-pre code {
+pre {
+    font-size: 90%;
+    margin: 10px 10px 10px 10px;
 }
 
 ul.posts {
@@ -60,15 +62,14 @@ ul.posts {
 }
 
 a {
-    color: #83c8f900;
-}
-
-a:hover {
-    color: black;
+    color: grey;
 }
 
 a:visited {
-    color: #83c8f900;
+    color: #112233;
+}
+a:hover {
+    color: black;
 }
 
 #post {
