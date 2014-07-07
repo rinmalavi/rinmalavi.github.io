@@ -56,7 +56,7 @@ Only 3 files need to be explained here:
         addSbtPlugin("your.groupId" % "your-app-name" % 
             System.getProperty("plugin.version"))
 
-    This explains that variable you have put in to `scriptedLaunchOpts`. You wouldn't want to fix every test every time you bump a version, or worse...
+    This explains that variable you have placed into the `scriptedLaunchOpts`. You wouldn't want to fix every test every time you bump a version, or worse...
 
 2. `build.sbt` is where you might want to define some keys which define a setting you are testing. For now, will just define a `task`
 
@@ -64,7 +64,6 @@ Only 3 files need to be explained here:
         TaskKey[Unit]("onePlusOneIsTwo") := {
           assert(1 + 1 == 2)
         }
-
 
 
 3. `test` `>onePlusOneIsTwo`
@@ -81,14 +80,18 @@ To perform a single test call
     scripted test_group/test_n
 
 
-Scripted will now `publishLocal` your plugin and resolve it in a project it copied to k`/tmp/sbt-<some randoms>` then run a task you called in `test` file.
-If your project depends on a library you are developing as a subproject, you have to publish it to so just add it to publishLocal task in your plugin project.
+Scripted will now `publishLocal` your plugin and resolve it in a project it copied to `/tmp/sbt-<some randoms>` then run a task you called in `test` file.
+If your project depends on a library you are developing as a subproject, you have to publish it to, so just add it to publishLocal task in your plugin project.
 
     publishLocal <<= publishLocal dependsOn( 
         publishLocal in yourLibraryProjectRef )
 
 
-Similarly for the resources.
+Similarly for the tests, test resources, something like.
+
+
+    unmanagedResourceDirectories in Test <++= unmanagedResourceDirectories in Test in <subproject>
+
 
 then if you are using some test resources you need to load them with your plugin. So plugin file now looks like this:
 
