@@ -3,9 +3,9 @@ title: SBT Plugin development (testing)
 layout: post
 ---
 
-This is a first in a series of posts that will describe my voyage through accepting some of the SBTs ways of thinking.
+This is the first in a series of posts that will describe my voyage in accepting appropriate SBT way of thinking.
 
-Assuming that you are good with scala, sbt, after that have a good idea why would you want a plugin.
+Assuming that you are comfortable with scala, sbt, after that have a good idea why you would need a plugin.
 
 
 #### Its easy to write a plugin!
@@ -21,7 +21,6 @@ Add to the plugins (`project/plugins.sbt`)
 
 
     libraryDependencies <+= sbtVersion("org.scala-sbt" % "scripted-plugin" % _)
-
 
 
 Add to your project settings:
@@ -58,7 +57,7 @@ Only 3 files need to be explained here:
 
     This explains that variable you have placed into the `scriptedLaunchOpts`. You wouldn't want to fix every test every time you bump a version, or worse...
 
-2. `build.sbt` is where you might want to define some keys which define a setting you are testing. For now, will just define a `task`
+2. `build.sbt` is where you might want to define some keys which define a setting you are testing. For now, we'll just define a `task`
 
 
         TaskKey[Unit]("onePlusOneIsTwo") := {
@@ -66,10 +65,12 @@ Only 3 files need to be explained here:
         }
 
 
-3. `test` `>onePlusOneIsTwo`
+3. `test` is a file that will be called on each scripted run. Here you can place anything that can be written to the sbt console of your test project. Lets just call to perform the assertion above.  
+
+        >onePlusOneIsTwo
 
 
-There testing is easy, we acutely wrote a task along the way, fun times!
+There, testing is easy, we acutely wrote a task along the way, fun times!
 
 Call all tests with 
 
@@ -80,20 +81,21 @@ To perform a single test call
     scripted test_group/test_n
 
 
-Scripted will now `publishLocal` your plugin and resolve it in a project it copied to `/tmp/sbt-<some randoms>` then run a task you called in `test` file.
-If your project depends on a library you are developing as a subproject, you have to publish it to, so just add it to publishLocal task in your plugin project.
+Scripted will now `publishLocal` your plugin and resolve it in a project it copied to `/tmp/sbt-<some randoms>` and then run a task you called in `test` file. 
+If your task returns some values you could call it from the task you defined in the `build.sbt` and `assert` the returned value with an expected result.
+If your project depends on a library you are developing as a subproject, you have to publish it too. To do so just add it to the `publishLocal` task in your plugin project.
 
     publishLocal <<= publishLocal dependsOn( 
         publishLocal in yourLibraryProjectRef )
 
 
-Similarly for the tests, test resources, something like.
+Similarly for the tests, test resources in the library projects, just add them to the classpath with something like
 
 
     unmanagedResourceDirectories in Test <++= unmanagedResourceDirectories in Test in <subproject>
 
 
-then if you are using some test resources you need to load them with your plugin. So plugin file now looks like this:
+Then if you are using some test resources or mocks you need to load them with your plugin to the test project. So your test `plugin.sbt` file now looks like this:
 
 
     addSbtPlugin("your.groupId" % "your-app-name" % 
