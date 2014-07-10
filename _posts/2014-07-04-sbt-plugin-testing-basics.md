@@ -104,4 +104,4 @@ Then if you are using some test resources or mocks you need to load them with yo
             classifier "tests" classifier "")
 
 
-[eugine yokota on testing] (http://eed3si9n.com/testing-sbt-plugins)
+[Eugine Yokota on testing] (http://eed3si9n.com/testing-sbt-plugins)
