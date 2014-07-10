@@ -9,6 +9,7 @@ Assuming that you are comfortable with scala, sbt, after that have a good idea w
 
 
 #### Its easy to write a plugin!
+Add to your build.sbt, or settings of a subproject.
 
     sbtPlugin := true
 
@@ -55,7 +56,7 @@ Only 3 files need to be explained here:
         addSbtPlugin("your.groupId" % "your-app-name" % 
             System.getProperty("plugin.version"))
 
-    This explains that variable you have placed into the `scriptedLaunchOpts`. You wouldn't want to fix every test every time you bump a version, or worse...
+    This explains that variable you have placed into the `scriptedLaunchOpts`. You wouldn't want to fix every test every time you bump a version.
 
 2. `build.sbt` is where you might want to define some keys which define a setting you are testing. For now, we'll just define a `task`
 
@@ -101,3 +102,6 @@ Then if you are using some test resources or mocks you need to load them with yo
     addSbtPlugin("your.groupId" % "your-app-name" % 
         System.getProperty("plugin.version"))
             classifier "tests" classifier "")
+
+
+[eugine yokota on testing] (http://eed3si9n.com/testing-sbt-plugins)
