@@ -90,7 +90,7 @@ If your project depends on a library you are developing as a subproject, you hav
         publishLocal in yourLibraryProjectRef )
 
 
-Similarly for the tests, test resources in the library projects, just add them to the classpath with something like
+Similarly for the tests, test resources in the library projects, only this is a path, just add them to the classpath with something like
 
 
     unmanagedResourceDirectories in Test <++= unmanagedResourceDirectories in Test in <subproject>
