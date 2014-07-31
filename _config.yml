@@ -1,2 +1,19 @@
 pygments: true
-github: [Repository metadata]
+permalink: /:categories/:year/:month/:day/:title
+
+author:
+  name: Marin Vila
+  github: rinmalavi
+  twitter: vila_marin
+
+comments :
+    provider : disqus
+    disqus :
+        short_name : marinvila
+
+
+#  analytics :
+#    provider : google
+#
+#    google :
+#        tracking_id : 'UA-123-12'

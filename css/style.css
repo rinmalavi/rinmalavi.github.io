@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+}
+
+h1, h2 {
+  border-bottom: 1px solid #dddddd;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 10px 10px;
+}
+
+ul, ol {
+  margin:0 10px 10px 0;
+  padding-left:1.5em;
+}
+
+body {
+  background-color: white;
+  font: 13px helvetica, arial, clean, sans-serif;
+  *font-size: small;
+  text-align: center;
+}
+
+pre {
+  font-size: 90%;
+  margin: 10px 10px 10px 10px;
+}
+
+ul.posts {
+  list-style-type: none;
+}
+
+.content {
+  text-align: justify;
+  width:41em;
+  margin:1em auto 1em auto;
+  line-height:1.5em;
+}
+
+.posts {
+  margin:1em 1em 1em 1em;
+}
+
+a {
+  color: grey;
+}
+
+.excerpt {
+  font-size:90%;
+  margin-bottom:1em;
+}
+
+.title {
+  margin-top:2em;
+  font-weight: bold;
+}
+
+.title .homeref a {
+  color: green;
+}
+
+.title .about a {
+  color: #111111;
+}
+
+.intro {
+  margin: 1em 0em 1em 0em;
+  text-size:87%;
+}
+
+a: hover {
+  color: black;
+}
+
+#post {
+  font-family: Georgia, serif;
+}
+
+#post pre {
+  border: 1px solid #ddd;
+  background-color: #edf;
+  padding: 0 .4em;
+}
+
+#post code {
+  border: 1px solid #ddd;
+  background-color: #edf;
+}
+
+#post pre code {
+  border: none;
+}
+
+.contact {
+  margin-right: 30px;
+}
+
+.contact a {
+  color: #bbb;
+}

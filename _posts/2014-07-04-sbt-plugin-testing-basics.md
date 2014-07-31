@@ -21,8 +21,8 @@ that's it, good job there.
 Add to the plugins (`project/plugins.sbt`)
 
 
-    libraryDependencies <+= sbtVersion("org.scala-sbt" % "scripted-plugin" % _)
-
+    libraryDependencies <+= 
+        sbtVersion("org.scala-sbt" % "scripted-plugin" % _)
 
 Add to your project settings:
 
@@ -68,18 +68,18 @@ Only 3 files need to be explained here:
 
 3. `test` is a file that will be called on each scripted run. Here you can place anything that can be written to the sbt console of your test project. Lets just call to perform the assertion above.  
 
-        >onePlusOneIsTwo
+        > onePlusOneIsTwo
 
 
 There, testing is easy, we acutely wrote a task along the way, fun times!
 
 Call all tests with 
 
-    scripted
+    > scripted
 
 To perform a single test call 
 
-    scripted test_group/test_n
+    > scripted test_group/test_n
 
 
 Scripted will now `publishLocal` your plugin and resolve it in a project it copied to `/tmp/sbt-<some randoms>` and then run a task you called in `test` file. 
@@ -93,7 +93,8 @@ If your project depends on a library you are developing as a subproject, you hav
 Similarly for the tests, test resources in the library projects, only this is a path, just add them to the classpath with something like
 
 
-    unmanagedResourceDirectories in Test <++= unmanagedResourceDirectories in Test in <subproject>
+    unmanagedResourceDirectories in Test <++= 
+        unmanagedResourceDirectories in Test in <subproject>
 
 
 Then if you are using some test resources or mocks you need to load them with your plugin to the test project. So your test `plugin.sbt` file now looks like this:
@@ -103,5 +104,7 @@ Then if you are using some test resources or mocks you need to load them with yo
         System.getProperty("plugin.version"))
             classifier "tests" classifier "")
 
+####Links:
 
-[Eugine Yokota on testing] (http://eed3si9n.com/testing-sbt-plugins)
+[Eugine Yokota on testing](http://eed3si9n.com/testing-sbt-plugins)
+

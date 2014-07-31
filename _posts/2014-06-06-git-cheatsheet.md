@@ -32,6 +32,3 @@ Squish, rewrite ... rebase  interactive mode
 Mingle with origin
 
     git remote set-url origin <url_of_the_repo>
-
-
-##More 2 Come

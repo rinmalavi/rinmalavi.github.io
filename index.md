@@ -6,6 +6,7 @@ tagline: Random Words
 <div class="intro">
 From the times of the late last year(, or the one before)*n I have been searching for a good way to flat map the sequence of options life was sent with from an unknown sender, called The Sender. The Sender is still awaiting response. It will have to hold on for quite a while longer.
 </div>
+
 ### Posts
 
 <ul class="posts">
