@@ -56,16 +56,29 @@ a {
 }
 
 .title {
+  margin:1em auto 1em auto;
+  width:11em;
   margin-top:2em;
   font-weight: bold;
 }
 
-.title .homeref a {
-  color: green;
+.homeref {
+  font-size:127%;
 }
 
 .title .about a {
   color: #111111;
+}
+
+.titlelink > div{
+  width:27px;
+  height:27px;
+  transform:rotate(45deg);
+}
+
+.rotate > div > span {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
 }
 
 .intro {
