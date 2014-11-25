@@ -32,3 +32,19 @@ Squish, rewrite ... rebase  interactive mode
 Mingle with origin
 
     git remote set-url origin <url_of_the_repo>
+
+Don't be scared of the next one!
+Force push (may replace what you have with what you may not want to have).
+
+    git push -f
+
+Just switch branches often enough.
+Make sure that you know what you are dropping.
+After that, regret nothing.
+
+Links:
+
+
+[Atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config)
+
+[ProGit](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
