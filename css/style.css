@@ -117,6 +117,21 @@ a: hover {
   color: #bbb;
 }
 
+.about {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+.aboutcontent {
+    font-size:187%;
+}
+
+.aboutlink{
+
+}
 
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
