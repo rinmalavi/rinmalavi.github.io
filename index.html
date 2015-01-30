@@ -3,20 +3,23 @@ layout: default
 title: Livlong En Prospa
 tagline: Random Words
 ---
+<div class="container">
 <div class="intro">
-From the times of the late last year(, or the one before)*n I have been searching for a good way to flat map the sequence of options life was sent with from an unknown sender, called The Sender. The Sender is still awaiting response. It will have to hold on for quite a while longer.
+From the times of the late last year(, or the one before)*n I have been searching for a good way to flat map the sequence of options life was sent with from an unknown sender, called The Sender.
+The Sender is still awaiting response.
+It will have to hold on for quite a while longer.
 </div>
 
 <h3>Posts</h3>
 
-<ul class="posts">
+<div class="row">
   {% for post in paginator.posts %}
-    <li>
+    <div class="col-sm-3">
       <a class="posttitle" href="{{ post.url }}">{{ post.title }}</a>
-      <div class="excerpt">{{ post.excerpt }}</div>
-    </li>
+      <div>{{ post.excerpt }}</div>
+    </div>
   {% endfor %}
-</ul>
+</div>
 
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
@@ -43,3 +46,4 @@ From the times of the late last year(, or the one before)*n I have been searchin
   {% endif %}
 </div>
 {% endif %}
+</div>
