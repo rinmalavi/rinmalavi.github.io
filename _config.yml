@@ -1,6 +1,8 @@
 markdown: redcarpet
 pygments: true
 permalink: /:categories/:year/:month/:day/:title
+paginate: 4
+paginate_path: "index:num/"
 
 author:
   name: Marin Vila

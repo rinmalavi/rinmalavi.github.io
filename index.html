@@ -1,0 +1,45 @@
+---
+layout: default
+title: Livlong En Prospa
+tagline: Random Words
+---
+<div class="intro">
+From the times of the late last year(, or the one before)*n I have been searching for a good way to flat map the sequence of options life was sent with from an unknown sender, called The Sender. The Sender is still awaiting response. It will have to hold on for quite a while longer.
+</div>
+
+<h3>Posts</h3>
+
+<ul class="posts">
+  {% for post in paginator.posts %}
+    <li>
+      <a class="posttitle" href="{{ post.url }}">{{ post.title }}</a>
+      <div class="excerpt">{{ post.excerpt }}</div>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
