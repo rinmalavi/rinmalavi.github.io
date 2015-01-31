@@ -1,22 +1,31 @@
 ---
         layout: shell
 ---
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-
-<div class="title">
-    <table>
-        <th><a class="homeref" href="/">marin vila</a></th>
-        <th><a class="titlelink" href="about.html">
-            <div><span>about</span></div>
-        </a></th>
-        <th><a class="titlelink" href="http://github.com/{{ site.author.github }}/"><div><span>github</span></div>
-        </a></th>
-        <th><a class="titlelink" href="http://twitter.com/{{ site.author.twitter }}/"><div><span>twitter</span></div></a></th>
-    </table>
-</div>
-<div class="content">
-    {{ content }}
-    <div class="footer">
+            <a class="navbar-brand" href="/">marin vila</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/about.html">personal</a></li>
+                <li><a href="/cv.html">professional</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://github.com/{{ site.author.github }}/">github</a></li>
+                <li><a class="titlelink" href="http://twitter.com/{{ site.author.twitter }}/">twitter</a></li>
+            </ul>
+        </div>
     </div>
+</nav>
+<div class="container ">
+    {{ content }}
 </div>
 

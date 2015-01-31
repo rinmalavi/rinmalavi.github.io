@@ -1,3 +1,5 @@
+body { padding-top: 70px; }
+
 .content {
   text-align: justify;
   margin:1em auto 1em auto;
@@ -18,14 +20,18 @@ a {
 }
 
 .title {
-  margin:1em auto 1em auto;
-  width:11em;
-  margin-top:2em;
+  margin: 1em auto 1em auto;
+  margin-top: 2em;
   font-weight: bold;
 }
 
+.title a {
+  margin: 1em 1em 1em 1em;
+  font-size: 110%;
+}
+
 .homeref {
-  font-size:127%;
+  font-size: 147%;
 }
 
 .title .about a {
@@ -85,14 +91,6 @@ a: hover {
   left: 50%;
   margin-top: -50px;
   margin-left: -100px;
-}
-
-.aboutcontent {
-    font-size:187%;
-}
-
-.aboutlink{
-
 }
 
 .highlight  { background: #ffffff; }
