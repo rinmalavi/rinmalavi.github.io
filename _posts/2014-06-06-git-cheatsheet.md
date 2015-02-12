@@ -10,22 +10,22 @@ Hope I don't have to mention
     git log
     git status
 
-Add 
+add
 
     git add -p  #select hunks
     git add --all
     git add -u  #update tracked
 
-Commit, will add changed files and commit:
+commit, will add changed files and commit:
 
     git commit -a -m 'your message here'
 
-Amend:
+amend:
 
     git commit --amend -m 'message'
     git commit -a --amend --no-edit
 
-Squish, rewrite ... rebase  interactive mode
+Squish, rewrite ... rebase interactive mode
 
     git rebase -i <branch_to_rebase_from>
 
