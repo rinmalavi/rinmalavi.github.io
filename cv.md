@@ -2,6 +2,8 @@
 layout: default
 ---
 
+2015 - Mentat Labs d.o.o
+
 2012 - now Element d.o.o.
 
 2011 - Working on a mental expansions trough an accessible universal presence ... well I was unemployed mostly.
