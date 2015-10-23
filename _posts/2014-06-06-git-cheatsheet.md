@@ -24,6 +24,11 @@ amend:
 
     git commit --amend -m 'message'
     git commit -a --amend --no-edit
+    
+merge, mine! Disregard what others think the changes should look like... 
+This is a bad practice, at this point sever mistakes were made long before.
+
+    git merge -X ours other_fork/other_branch
 
 Squish, rewrite ... rebase interactive mode
 
@@ -41,6 +46,10 @@ Force push (may replace what you have with what you may not want to have).
 Just switch branches often enough.
 Make sure that you know what you are dropping.
 After that, regret nothing.
+
+Nice logs, add \[alias\] to `.gitconfig`:
+
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 Links:
 

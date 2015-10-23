@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Some mildly sorted bunch of links I came across and decided I will revisit them. Like the source of this page...
+Some mildly sorted bunch of links I came across and decided to revisit them. Like the source of this page...
 
 ##repositories
 
@@ -10,7 +10,7 @@ Some mildly sorted bunch of links I came across and decided I will revisit them.
 
 [scaloid](https://github.com/pocorall/scaloid)
 
-[GL wrapper] (https://github.com/LWJGL/lwjgl3)
+[GL java wrapper] (https://github.com/LWJGL/lwjgl3)
 
 [sbt-web plugins](https://github.com/sbt/sbt-web)
 
@@ -34,7 +34,15 @@ Some mildly sorted bunch of links I came across and decided I will revisit them.
 
 [Slick 2 multi-database](http://blog.knoldus.com/2014/01/20/scala-slick-2-0-for-multi-database/)
 
+[migrating play 2.3->2.4 slick 2->3](https://blog.sourcy.io/2015/05/27/porting-scala-play-2-3-application-with-slick-2-1-0-to-play-2-4-slick-3-0-0/)
+
 [yanns](http://yanns.github.io/)
+
+###tools
+
+[emmet](www.emmet.io)
+
+[image prototyping - lorempixel](lorempixel.com)
 
 ####Design
 
@@ -46,8 +54,13 @@ Some mildly sorted bunch of links I came across and decided I will revisit them.
 
 [Angular in 60ish](https://youtu.be/i9MHigUZKEM)
 
-
 #####JS:
 
 [Elevator] (http://tholman.com/elevator.js/)
+
+[webaudio](http://webaudioapi.com)
+
+[webaudio book](http://chimera.labs.oreilly.com/books/1234000001552/pr01.html)
+
+[safari webaudio](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html)
 
