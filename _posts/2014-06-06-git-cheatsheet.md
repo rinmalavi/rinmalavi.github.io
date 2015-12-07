@@ -26,7 +26,7 @@ amend:
     git commit -a --amend --no-edit
     
 merge, mine! Disregard what others think the changes should look like... 
-This is a bad practice, at this point sever mistakes were made long before.
+This is a bad practice, sever mistakes leading here were already made.
 
     git merge -X ours other_fork/other_branch
 
@@ -37,6 +37,10 @@ Squish, rewrite ... rebase interactive mode
 Mingle with origin
 
     git remote set-url origin <url_of_the_repo>
+
+Push to another branch.
+
+    git push origin some_branch:some_other_branch
 
 Don't be scared of the next one!
 Force push (may replace what you have with what you may not want to have).

@@ -47,6 +47,7 @@ Some mildly sorted bunch of links I came across and decided to revisit them. Lik
 ####Design
 
 [http://allison.house/](http://allison.house/)
+[Foundation (uncompleted)](http://fedil.ukneeq.com/technology/tutorial-foundation-for-apps-setup-with-angularjs-best-practices/)
 
 ####Videos:
 
