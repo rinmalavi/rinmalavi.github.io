@@ -30,9 +30,22 @@ This is a bad practice, sever mistakes leading here were already made.
 
     git merge -X ours other_fork/other_branch
 
-Squish, rewrite ... rebase interactive mode
+Squish, rewrite ... rebase interactive mode.
 
     git rebase -i <branch_to_rebase_from>
+    
+Don't touch other people commits with this.
+Don't touch commits other people already merged/rebased, or you will bring the wrath of the office upon yourself!
+However do use it on your public repositories to hide disgrace you might have shown to the internet, but with care (and push -f).  
+
+Diff
+
+    git diff branch_to_diff_with --name-only 
+    git diff branch_to_diff_with:file_path file_path 
+
+Diff stash 
+
+    git stash show -p stash@{0}
 
 Mingle with origin
 
@@ -56,7 +69,6 @@ Nice logs, add \[alias\] to `.gitconfig`:
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 Links:
-
 
 [Atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config)
 

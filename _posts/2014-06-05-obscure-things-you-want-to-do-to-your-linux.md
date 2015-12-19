@@ -3,7 +3,7 @@ title: Obscure things you want to do to your 'nix
 layout: post
 ---
 
-Tired of a complete miss use of one of the biggest keys on keyboard, and inaccessibility of the most important.
+Tired of a complete misuse of one of the biggest keys on keyboard, and inaccessibility of the most important.
 
     setxkbmap -option ctrl:nocaps
 
