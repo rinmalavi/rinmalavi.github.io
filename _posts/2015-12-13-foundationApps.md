@@ -1,8 +1,8 @@
 ---
-title: Foundation Apps.
+title: Foundation Apps
 layout: post
 ---
-Templating engine based on angular.js. This post is aimed at depicting some trivial solutions that might arise developing frontend with Foundation for Apps.
+Templating engine based on angular.js. This post is aimed at depicting some simple solutions that might help developing frontend with Foundation for Apps.
 
 ####Links and Libraries
 
