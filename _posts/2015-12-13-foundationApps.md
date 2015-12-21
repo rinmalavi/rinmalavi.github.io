@@ -18,7 +18,7 @@ Templating engine based on angular.js. This post is aimed at depicting some triv
     name: someName
     url: /someUrl
     title: Very Important Page
-    **controller: MyCtrl**
+    controller: MyCtrl
     ---
 
 `MyCtrl` will then extend Foundations `DefaultController`.
@@ -51,7 +51,11 @@ value passed this way will end up in
 
 With the help of `encodeURI(JSON.stringify(object))` `JSON.parse(decodeURI(object))`
 
-From JS call this route with: `$state.go("someName", {parameterName: parameterValue});`.
+Call this route with: 
+
+```javascript
+$state.go("someName", {parameterName: parameterValue});
+```
 
 Use `ui-sref="someName({parameterName: parameterValue})` in HTML.
 
@@ -69,7 +73,7 @@ Generate more than one element per iteration of `ng-repeat`, `filter`, then `lim
 
 ```html
 <td data-ng-repeat-start="obj in someArray | filter item.isEnabled | limitTo:3">
-{% raw %}{{obj.index}}{% endraw %}
+{% raw %}   {{obj.index}}{% endraw %}
 </td>
 <td data-ng-repeat-middle>{% raw %}{{cp.key}}{% endraw %}</td>
 <td data-ng-repeat-end>{% raw %}{{cp.value}}{% endraw %}</td>

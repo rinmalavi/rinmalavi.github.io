@@ -64,13 +64,13 @@ a: hover {
 
 #post pre {
   border: 1px solid #ddd;
-  background-color: #edf;
+  background-color: #f7f2f7;
   padding: 0 .4em;
 }
 
 #post code {
   border: 1px solid #ddd;
-  background-color: #edf;
+  background-color: #f7f2f7;
 }
 
 #post pre code {
