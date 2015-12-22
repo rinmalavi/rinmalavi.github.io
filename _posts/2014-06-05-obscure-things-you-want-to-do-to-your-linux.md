@@ -15,3 +15,7 @@ Tired of a complete misuse of one of the biggest keys on keyboard, and inaccessi
 Missing a certificate?
 
     mozroots --import --ask-remove
+
+Restart sound..
+
+    pulseaudio -k && sudo alsa force-reload

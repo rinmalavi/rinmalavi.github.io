@@ -4,15 +4,13 @@ title: Marin Vila
 tagline: Random Words
 ---
 <div class="intro page-header">
-  Public Notebook.
+  <h3>Public Notebook</h3>
 </div>
-
-<h3>Posts</h3>
 
 <div class="row">
   {% for post in paginator.posts %}
-    <div class="col-sm-6">
-      <a class="posttitle" href="{{ post.url }}">{{ post.title }}</a>
+    <div class="col-sm-3">
+      <a class="posttitle" href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
       <div>{{ post.excerpt }}</div>
     </div>
   {% endfor %}

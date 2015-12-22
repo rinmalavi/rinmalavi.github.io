@@ -12,6 +12,8 @@ Templating engine based on angular.js. This post is aimed at depicting some simp
 
 [datepicker](https://github.com/Eonasdan/bootstrap-datetimepicker)
 
+[icons](http://fortawesome.github.io/Font-Awesome/icons/)
+
 ####Use a custom controller
 
     ---
@@ -92,4 +94,10 @@ Conditional class
     class="button">
 {% raw %}  {{heavyButton ? "Press With Caution" : "Just Press Already"}}{% endraw %}
 </a>
+```
+
+Deep copy
+
+```javascript
+angular.copy(originalObject, copyOfTheOriginal)
 ```
