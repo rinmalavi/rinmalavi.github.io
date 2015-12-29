@@ -1,5 +1,5 @@
 ---
-title: Adb commands.
+title: Adb commands
 layout: post
 ---
 Few commands needed to debloat the phone.

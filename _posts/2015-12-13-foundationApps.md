@@ -101,3 +101,10 @@ Deep copy
 ```javascript
 angular.copy(originalObject, copyOfTheOriginal)
 ```
+
+`cacheFactory`
+
+    var defineCache = $cacheFactory('cacheId');
+    var definedCache = $cacheFactory.get('cacheId')
+    
+    cache.put("key", "value");
