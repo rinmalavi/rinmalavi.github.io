@@ -102,7 +102,7 @@ Deep copy
 angular.copy(originalObject, copyOfTheOriginal)
 ```
 
-`cacheFactory`
+angular's caching service `cacheFactory`
 
     var defineCache = $cacheFactory('cacheId');
     var definedCache = $cacheFactory.get('cacheId')

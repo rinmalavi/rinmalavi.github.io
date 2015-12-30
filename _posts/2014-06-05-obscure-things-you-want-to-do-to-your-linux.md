@@ -23,3 +23,7 @@ Restart sound..
 mount usb
 
     mount -o gid=1000,uid=1000 /dev/sdb1 usb
+
+don't save history
+
+    export HISTFILE=/dev/null
