@@ -24,6 +24,6 @@ mount usb
 
     mount -o gid=1000,uid=1000 /dev/sdb1 usb
 
-don't save history
+don't save history in a current session
 
     export HISTFILE=/dev/null

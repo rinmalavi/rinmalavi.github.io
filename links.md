@@ -4,6 +4,8 @@ layout: default
 
 Some mildly sorted bunch of links I came across and decided to revisit them. Like the source of this page...
 
+[regex](http://www.regular-expressions.info/)
+
 ##repositories
 
 [dotty] (https://github.com/lampepfl/dotty)
