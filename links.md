@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Some mildly sorted bunch of links I came across and decided to revisit them. Like the source of this page...
+Some mildly sorted bunch of links I came across and decided to revisit them.
 
 [regex](http://www.regular-expressions.info/)
 
@@ -49,6 +49,7 @@ Some mildly sorted bunch of links I came across and decided to revisit them. Lik
 ####Design
 
 [http://allison.house/](http://allison.house/)
+
 [Foundation (uncompleted)](http://fedil.ukneeq.com/technology/tutorial-foundation-for-apps-setup-with-angularjs-best-practices/)
 
 ####Videos:
