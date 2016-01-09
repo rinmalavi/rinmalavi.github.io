@@ -40,6 +40,8 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 
 [yanns](http://yanns.github.io/)
 
+[zookeeper](http://sysgears.com/articles/managing-configuration-of-distributed-system-with-apache-zookeeper/)
+
 ###tools
 
 [emmet](www.emmet.io)
