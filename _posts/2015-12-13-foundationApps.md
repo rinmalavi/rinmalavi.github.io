@@ -4,15 +4,15 @@ layout: post
 ---
 Templating engine based on angular.js. This post is aimed at depicting some simple solutions that might help developing frontend with Foundation for Apps.
 
-####Links and Libraries
+###Links and Libraries
 
 [official Foundation for Apps docs](http://foundation.zurb.com/apps/docs/#!/)
 
 [official Template](https://github.com/zurb/foundation-apps-template/tree/v1.1.0)
 
-[datepicker](https://github.com/Eonasdan/bootstrap-datetimepicker)
-
-[icons](http://fortawesome.github.io/Font-Awesome/icons/)
+[datepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) -
+[icons](http://fortawesome.github.io/Font-Awesome/icons/) -
+[pagination](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination)
 
 ####Use a custom controller
 
@@ -37,7 +37,7 @@ and if in separate file, this file will need to be
 [added to the gulp task](https://github.com/zurb/foundation-apps-template/blob/v1.1.0/gulpfile.js#L47).
 Addition to `gulpfile.js` will require `gulp restart`.
 
-####URL
+###URL
 
 Information in query parameters
 
@@ -66,10 +66,70 @@ Use `ui-sref="someName({parameterName: parameterValue})` in HTML.
 
 modal close // open
 
-    FoundationApi.publish('someModal', 'close'); // 'open'
-    FoundationApi.closeActiveElements('someModal')
+```javascript
+FoundationApi.publish('someModal', 'close'); // 'open'
+FoundationApi.closeActiveElements('someModal')
+```
 
-###Some Angular
+###Pagination
+
+There is no Foundation solution here. [Pagination](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) needs a bootstrap class `pagination`.
+So either define it or cp template to replace it with `button-group segmented` with addition of
+
+```css
+.button-group > li.active > a {
+  background-color: #12769b;
+  color: white;
+}
+```
+
+in CSS. Templates could look something like
+
+```html
+<ul class="segmented button-group"
+    ng-if="1<pages.length || !autoHide">
+    <li ng-if="boundaryLinks"
+        ng-class="{disabled: pagination.current == 1}">
+        <a href="" ng-click="setCurrent(1)">&laquo;</a>
+    </li>
+    <li ng-if="directionLinks"
+        ng-class="{ disabled : pagination.current == 1 }">
+        <a href="" ng-click="setCurrent(pagination.current - 1)">
+            &lsaquo;
+        </a>
+    </li>
+    <li ng-repeat="pageNumber in pages track by tracker(pageNumber, $index)"
+        ng-class="{active:pagination.current==pageNumber, disabled:pageNumber=='...'}">
+        <a href="" ng-click="setCurrent(pageNumber)">{{ pageNumber }}</a>
+    </li>
+    <li ng-if="directionLinks"
+        ng-class="{disabled: pagination.current==pagination.last}">
+        <a href=""
+            ng-click="setCurrent(pagination.current+1)">
+            &rsaquo;
+        </a>
+    </li>
+    <li ng-if="boundaryLinks"
+        ng-class="{disabled: pagination.current==pagination.last}">
+        <a href="" ng-click="setCurrent(pagination.last)">
+            &raquo;
+        </a>
+    </li>
+</ul>
+```
+
+application module needs something like this
+
+```javascript
+.config(function(paginationTemplateProvider) {
+  paginationTemplateProvider.setPath(
+    'templates/paginationTemplate.html');
+})
+```
+
+This must be a wip. There must a better way.
+
+##Some Angular
 
 Generate more than one element per iteration of `ng-repeat`, `filter`, then `limitTo`
 
@@ -104,7 +164,9 @@ angular.copy(originalObject, copyOfTheOriginal)
 
 angular's caching service `cacheFactory`
 
-    var defineCache = $cacheFactory('cacheId');
-    var definedCache = $cacheFactory.get('cacheId')
-    
-    cache.put("key", "value");
+```javascript
+var defineCache = $cacheFactory('cacheId');
+var definedCache = $cacheFactory.get('cacheId')
+
+cache.put("key", "value");
+```
