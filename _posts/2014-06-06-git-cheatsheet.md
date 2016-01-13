@@ -64,6 +64,10 @@ Just switch branches often enough.
 Make sure that you know what you are dropping.
 After that, regret nothing.
 
+Clean unwanted
+
+    git clean -f -n
+
 Nice logs, add \[alias\] to `.gitconfig`:
 
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
