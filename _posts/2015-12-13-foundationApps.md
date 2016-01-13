@@ -10,10 +10,11 @@ Templating engine based on angular.js. This post is aimed at depicting some simp
 
 [official Template](https://github.com/zurb/foundation-apps-template/tree/v1.1.0)
 
-[datepicker](https://github.com/Eonasdan/bootstrap-datetimepicker) -
-[icons](http://fortawesome.github.io/Font-Awesome/icons/) -
-[pagination](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination)
+[icons](http://fortawesome.github.io/Font-Awesome/icons/)
 
+[pagination](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) - 
+[select boxes](https://github.com/angular-ui/ui-select) -
+[datepicker](https://github.com/Eonasdan/bootstrap-datetimepicker)
 ####Use a custom controller
 
     ---
