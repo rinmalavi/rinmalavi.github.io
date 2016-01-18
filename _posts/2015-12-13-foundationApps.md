@@ -15,6 +15,8 @@ Templating engine based on angular.js. This post is aimed at depicting some simp
 [pagination](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) - 
 [select boxes](https://github.com/angular-ui/ui-select) -
 [datepicker](https://github.com/Eonasdan/bootstrap-datetimepicker)
+
+
 ####Use a custom controller
 
     ---
@@ -69,6 +71,7 @@ modal close // open
 
 ```javascript
 FoundationApi.publish('someModal', 'close'); // 'open'
+
 FoundationApi.closeActiveElements('someModal')
 ```
 
@@ -132,7 +135,7 @@ This must be a wip. There must a better way.
 
 ##Some Angular
 
-Generate more than one element per iteration of `ng-repeat`, `filter`, then `limitTo`
+Generate more than one element per iteration with `ng-repeat`, `filter`, then `limitTo`
 
 ```html
 <td data-ng-repeat-start="obj in someArray | filter item.isEnabled | limitTo:3">
@@ -142,7 +145,7 @@ Generate more than one element per iteration of `ng-repeat`, `filter`, then `lim
 <td data-ng-repeat-end>{% raw %}{{cp.value}}{% endraw %}</td>
 ```
 
-Include template
+Include a template
 
 ```html
 <div ng-include="" src="'path/to/template.html'"></div>
@@ -171,3 +174,25 @@ var definedCache = $cacheFactory.get('cacheId')
 
 cache.put("key", "value");
 ```
+
+Trigger an event, lets say we want `js` to click 
+
+```js
+$timeout(function(){
+    angular.element('#tab' + $stateParams.tab).trigger("click");
+});
+```
+
+use $timeout if its in 'already' in the $digest cycle.
+
+datalist
+
+```html
+<input type="text" list="listing" placeholder="" ng-model="selected">
+
+<datalist id="countries">
+  <select ng-model="selected" data-ng-options="item.name as item.name for item in listing track by item.name"></select>
+</datalist>
+```
+
+(track is a bit off unfortunately)
