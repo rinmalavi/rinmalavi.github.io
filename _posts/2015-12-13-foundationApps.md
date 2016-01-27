@@ -2,7 +2,7 @@
 title: Foundation Apps
 layout: post
 ---
-Templating engine based on angular.js. This post is aimed at depicting some simple solutions that might help developing frontend with Foundation for Apps.
+Templating engine based on `angular.js`. This post is aimed at depicting some simple solutions that might help developing frontend with `Foundation for Apps`.
 
 ###Links and Libraries
 
@@ -183,7 +183,7 @@ $timeout(function(){
 });
 ```
 
-use $timeout if its in 'already' in the $digest cycle.
+use `$timeout` if its in 'already' in the `$digest` cycle.
 
 datalist
 

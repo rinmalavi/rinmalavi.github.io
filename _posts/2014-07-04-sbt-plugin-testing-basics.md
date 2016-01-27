@@ -3,7 +3,7 @@ title: SBT Plugin development (testing)
 layout: post
 ---
 
-This is the first in a series of posts that will describe my voyage in accepting appropriate SBT way of thinking.
+This is the first in a series of posts that will describe my voyage in accepting appropriate `SBT` way of thinking.
 
 Assuming that you are comfortable with scala, sbt, after that have a good idea why you would need a plugin.
 
