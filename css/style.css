@@ -54,8 +54,9 @@ a {
   text-size:87%;
 }
 
-a: hover {
+a:hover {
   color: black;
+  text-decoration: none;
 }
 
 #post {

@@ -9,9 +9,11 @@ tagline: Random Words
 
 <div class="row">
   {% for post in paginator.posts %}
-    <div class="col-sm-3">
-      <a class="posttitle" href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+    <div class="col-sm-4">
+      <a class="posttitle" href="{{ post.url }}"><h4>{{ post.title }}</h4>
       <div>{{ post.excerpt }}</div>
+      </a>
+
     </div>
   {% endfor %}
 </div>

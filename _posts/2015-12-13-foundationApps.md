@@ -78,7 +78,7 @@ FoundationApi.closeActiveElements('someModal')
 ###Pagination
 
 There is no Foundation solution here. [Pagination](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) needs a bootstrap class `pagination`.
-So either define it or cp template to replace it with `button-group segmented` with addition of
+So either define it or cp template to replace it with `button-group segmented` with the addition of
 
 ```css
 .button-group > li.active > a {
