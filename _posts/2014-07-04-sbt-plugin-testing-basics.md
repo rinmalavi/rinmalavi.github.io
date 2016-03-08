@@ -72,7 +72,6 @@ Only 3 files need to be explained here:
       assert(1 + 1 == 2)
     }
     ```
-s
 
 3. `test` is a file that will be called on each scripted run. Here you can place anything that can be written to the sbt console of your test project. Lets just call to perform the assertion above.  
 
