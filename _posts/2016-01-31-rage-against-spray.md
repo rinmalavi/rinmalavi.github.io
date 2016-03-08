@@ -1,6 +1,5 @@
 ---
 title: Rage Against Spray
-category: post
 layout: post
 ---
 
