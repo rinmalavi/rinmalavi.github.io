@@ -5,7 +5,7 @@ layout: post
 
 It's not a rage session, just a love/hate relationship.
 
-###Minimum code
+### Minimum code
 
 in build.sbt
 
@@ -42,7 +42,7 @@ object Boot extends App{
 }
 ```
 
-####Test
+#### Test
 `"io.spray" %% "spray-testkit"  % "1.3.3" % "test"`
 
 [specs2](https://etorreborre.github.io/specs2/)
@@ -95,7 +95,7 @@ To test response content user `responseAs` (requires `Unmarshaller` in the scope
 responseAs[String] === "ok"
 ```
 
-####Continous Redeployment
+#### Continuous Redeployment
 
 For this we have a plugin called [`sbt-revolver`](https://github.com/spray/sbt-revolver)
 sbt-revolver will recompile and redeploy on every code change.
@@ -104,7 +104,7 @@ sbt-revolver will recompile and redeploy on every code change.
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.8.0")
 ```
 
-####fork in run := true
+#### fork in run := true
 
 [Forking jvm](http://www.scala-sbt.org/0.13.5/docs/Detailed-Topics/Forking.html)
 [when running spray](http://www.scala-sbt.org/0.13.5/docs/Detailed-Topics/Running-Project-Code.html#user-code)
@@ -115,7 +115,7 @@ also, to forward `stdin` to a forked process add
 connectInput in run := true
 ```
 
-###Directives
+### Directives
 
 `complete` attempts to transform the result you provided to `HttpResponse`
 
@@ -158,7 +158,7 @@ pathPrefix("service") {
   }
 ```
 
-###Marshaling
+### Marshaling
 
 Add an implicit Marshaller/Unmarshaller to the scope
 
@@ -174,7 +174,7 @@ trait Marshallers {
 }
 ```
 
-###Authentification
+### Authentification
 
 define:
 
@@ -195,7 +195,7 @@ then pass it to the `authenticate` directive  passably like this:
 authenticate(BasicAuth(authenticator _, "realm"))
 ```
 
-###Exceptions
+### Exceptions
 
 `runRoute` accepts one implicitly
 
@@ -206,7 +206,7 @@ implicit val divByZeroHandler = ExceptionHandler {
 }
 ```
 
-###Rejections
+### Rejections
 
 Almost the same as Exceptions
 
@@ -218,7 +218,7 @@ implicit val totallyMissingHandler = RejectionHandler {
 }
 ```
 
-##Scala Perls
+## Scala Perls
 
 [magnet](http://spray.io/blog/2012-12-13-the-magnet-pattern/)
 
@@ -227,7 +227,7 @@ implicit val totallyMissingHandler = RejectionHandler {
 [type classes](http://danielwestheide.com/blog/2013/02/06/the-neophytes-guide-to-scala-part-12-type-classes.html)
 
 
-##Apendex A - Spray Client
+## Apendex A - Spray Client
 
 ```scala
 IO(Http) ! HttpRequest(POST,
@@ -240,9 +240,9 @@ Path can be constructed with `Uri.Path`
 There are also shorthands for `Get`, `Post`, `Put`. Query params are added with the `withQuery` method on `Uri`.
 You may have already noticed this is used in the test example above.
 
-##Apendex B - Debugging
+## Apendex B - Debugging
 
-####FromRequestUnmarshaller
+#### FromRequestUnmarshaller
 
 When you get
 
@@ -268,7 +268,7 @@ But the path seems fine
     try adding the / at start of the path ...
 
 
-###Following is the collection of unknowns, just work around it...
+### Following is the collection of unknowns, just work around it...
 
 #### Class not found?
 
