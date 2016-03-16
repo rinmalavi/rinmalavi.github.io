@@ -89,7 +89,7 @@ Tested here is the actual testing.
 You would, usually, test your routes (say they are called `someRoutes`)
 by writing `~> someRoutes` instead of that `complete` up there.
 
-To test response content user `responseAs` (requires `Unmarshaller` in the scope):
+To test response content use `responseAs` (requires `Unmarshaller` for a given type in the scope):
 
 ```scala
 responseAs[String] === "ok"
@@ -97,8 +97,8 @@ responseAs[String] === "ok"
 
 #### Continuous Redeployment
 
-For this we have a plugin called [`sbt-revolver`](https://github.com/spray/sbt-revolver)
-sbt-revolver will recompile and redeploy on every code change.
+is accomplished with the plugin called [`sbt-revolver`](https://github.com/spray/sbt-revolver).
+It will recompile and redeploy on every code change.
 
 ```scala
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.8.0")
@@ -148,7 +148,7 @@ pathPrefix("service") {
   } ~
     path("entity") {
       get {
-        parameters('id) { mId =>
+        parameters("id") { mId =>
           complete {
             s"your query id is $id"
           }
