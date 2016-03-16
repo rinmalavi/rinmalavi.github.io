@@ -6,21 +6,21 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 
 [regex](http://www.regular-expressions.info/)
 
-##repositories
+## Repositories
 
 [dotty] (https://github.com/lampepfl/dotty)
 
 [scaloid](https://github.com/pocorall/scaloid)
 
-[GL java wrapper] (https://github.com/LWJGL/lwjgl3)
+[GL java wrapper](https://github.com/LWJGL/lwjgl3)
 
 [sbt-web plugins](https://github.com/sbt/sbt-web)
 
 [slick-pg](https://github.com/tminglei/slick-pg)
 
-[slick multi DB example] (https://github.com/typesafehub/activator-slick-multidb/blob/master/src/main/scala/cake/MultiDBCakeExample.scala)
+[slick multi DB example](https://github.com/typesafehub/activator-slick-multidb/blob/master/src/main/scala/cake/MultiDBCakeExample.scala)
 
-###programming
+### Programming
 
 [play framework and facebooks react chat sample code](http://matthiasnehlsen.com/blog/2014/01/05/play-framework-and-facebooks-react-library/)
 
@@ -42,13 +42,16 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 
 [zookeeper](http://sysgears.com/articles/managing-configuration-of-distributed-system-with-apache-zookeeper/)
 
-###tools
+[elasticsearch postgres](http://haltcondition.net/2014/04/realtime-postgres-elasticsearch/)
+[example postgres-elasticsearch-realtime](https://bitbucket.org/tarkasteve/postgres-elasticsearch-realtime)
+
+### Tools
 
 [emmet](www.emmet.io)
 
 [image prototyping - lorempixel](lorempixel.com)
 
-####Design
+#### Design
 
 [cgsociety](http://www.cgsociety.org/)
 
@@ -56,13 +59,13 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 
 [Foundation (uncompleted)](http://fedil.ukneeq.com/technology/tutorial-foundation-for-apps-setup-with-angularjs-best-practices/)
 
-####Videos:
+#### Videos
 
-[Monster] (https://youtu.be/-0oZNWif_jk)
+[Monster](https://youtu.be/-0oZNWif_jk)
 
 [Angular in 60ish](https://youtu.be/i9MHigUZKEM)
 
-#####JS:
+##### JS
 
 [Elevator] (http://tholman.com/elevator.js/)
 
