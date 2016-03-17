@@ -4,7 +4,7 @@ layout: post
 ---
 Templating engine based on `angular.js`. This post is aimed at depicting some simple solutions that might help developing frontend with `Foundation for Apps`.
 
-###Links and Libraries
+### Links and Libraries
 
 [official Foundation for Apps docs](http://foundation.zurb.com/apps/docs/#!/)
 
@@ -17,7 +17,7 @@ Templating engine based on `angular.js`. This post is aimed at depicting some si
 [datepicker](https://github.com/Eonasdan/bootstrap-datetimepicker)
 
 
-####Use a custom controller
+#### Use a custom controller
 
     ---
     name: someName
@@ -40,7 +40,7 @@ and if in separate file, this file will need to be
 [added to the gulp task](https://github.com/zurb/foundation-apps-template/blob/v1.1.0/gulpfile.js#L47).
 Addition to `gulpfile.js` will require `gulp restart`.
 
-###URL
+### URL
 
 Information in query parameters
 
@@ -65,7 +65,7 @@ $state.go("someName", {parameterName: parameterValue});
 Use `ui-sref="someName({parameterName: parameterValue})` in HTML.
 
 
-####Navigating in JavaScript
+#### Navigating in JavaScript
 
 modal close // open
 
@@ -75,7 +75,7 @@ FoundationApi.publish('someModal', 'close'); // 'open'
 FoundationApi.closeActiveElements('someModal')
 ```
 
-###Pagination
+### Pagination
 
 There is no Foundation solution here. [Pagination](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) needs a bootstrap class `pagination`.
 So either define it or cp template to replace it with `button-group segmented` with the addition of
@@ -133,7 +133,7 @@ application module needs something like this
 
 This must be a wip. There must a better way.
 
-##Some Angular
+## Some Angular
 
 Generate more than one element per iteration with `ng-repeat`, `filter`, then `limitTo`
 
