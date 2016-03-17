@@ -23,6 +23,7 @@ Key can be defined as one of 3 different types:
 
 
 Shorthand way to define them
+
 ```scala
 TaskKey[Unit]("callTask") := {
   println("doing something here")
