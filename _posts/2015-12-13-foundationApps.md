@@ -40,6 +40,16 @@ and if in separate file, this file will need to be
 [added to the gulp task](https://github.com/zurb/foundation-apps-template/blob/v1.1.0/gulpfile.js#L47).
 Addition to `gulpfile.js` will require `gulp restart`.
 
+###Finding your binders
+
+If you lost your variable in a forest of scopes, transcludes and other weirds, this is how you find them:
+
+```html
+<select  data-ng-options="item.name for item in $parent.partners.listing track by item.name"
+  ng-model="$parent.$parent.$parent.owner" ng-change="$parent.$parent.$parent.changeTheValueAlready()">
+</select>
+```
+
 ### URL
 
 Information in query parameters
@@ -195,4 +205,4 @@ datalist
 </datalist>
 ```
 
-(track is a bit off unfortunately)
+track is a bit off unfortunately, in regular select also. Had no time to see into it.
