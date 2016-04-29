@@ -5,6 +5,8 @@ layout: post
 
 It's not a rage session, just a love/hate relationship.
 
+[demo](https://github.com/spray/spray/blob/master/examples/spray-can/simple-http-server/src/main/scala/spray/examples)
+
 ### Minimum code
 
 in build.sbt
@@ -133,6 +135,8 @@ connectInput in run := true
 
 `entity(as[SomeClass])` attempts to unmarshall an incoming request as an instance of `SomeClass`
 
+`getFromBrowseableDirectory` complete with given directorty
+
 `detach`! detaches an execution of your code from neverendnessness...
 
 Simple example
@@ -217,6 +221,13 @@ implicit val totallyMissingHandler = RejectionHandler {
         "Oh man, what you are looking for is long gone.")
 }
 ```
+
+## SSL
+Cannot support TLS_RSA_WITH_AES_256_CBC_SHA with currently installed providers
+
+[doc](http://spray.io/documentation/1.2.3/spray-can/http-server/#ssl-support)
+[jce](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
+
 
 ## Scala Perls
 
