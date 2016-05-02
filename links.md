@@ -45,6 +45,7 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 [elasticsearch postgres](http://haltcondition.net/2014/04/realtime-postgres-elasticsearch/)
 [example postgres-elasticsearch-realtime](https://bitbucket.org/tarkasteve/postgres-elasticsearch-realtime)
 
+[nginx and spray](http://blog.digitalsoftware.pl/spray-and-static-content/)
 ### Tools
 
 [emmet](www.emmet.io)
