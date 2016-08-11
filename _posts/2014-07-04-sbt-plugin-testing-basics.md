@@ -114,7 +114,7 @@ addSbtPlugin("your.groupId" % "your-app-name" %
         classifier "tests" classifier "")
 ```
 
-####Links:
+#### Links:
 
 [Eugine Yokota on testing](http://eed3si9n.com/testing-sbt-plugins)
 

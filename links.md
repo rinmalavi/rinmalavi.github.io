@@ -46,6 +46,10 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 [example postgres-elasticsearch-realtime](https://bitbucket.org/tarkasteve/postgres-elasticsearch-realtime)
 
 [nginx and spray](http://blog.digitalsoftware.pl/spray-and-static-content/)
+
+[reactjs vs angular](http://matthiasnehlsen.com/blog/2014/03/31/birdwatch-with-reactjs/)
+
+[websockets with akka-http](http://blog.scalac.io/2015/07/30/websockets-server-with-akka-http.html)
 ### Tools
 
 [emmet](www.emmet.io)

@@ -139,7 +139,7 @@ connectInput in run := true
 
 `detach`! detaches an execution of your code from neverendnessness...
 
-Simple example
+#### Simple example
 
 ```scala
 pathPrefix("service") {
@@ -160,6 +160,16 @@ pathPrefix("service") {
       }
     }
   }
+```
+
+#### Serve index page
+
+```scala
+pathEndOrSingleSlash{
+  getFromResource("index.html")
+} ~ pathPrefix("assets"){
+  getFromResourceDirectory("assets")
+}
 ```
 
 ### Marshaling
@@ -297,3 +307,6 @@ When trying to test authorization.
 [error]  required: spray.routing.directives.ParamDefMagnet
 ```
 
+##### Also to remove margin when pasting multiline string
+
+editor -> Code Style -> multi-line strings -> Add/Insert margin ....

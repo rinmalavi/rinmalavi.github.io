@@ -34,3 +34,7 @@ don't save history in a current session
 what is using port 7777
 
     sudo netstat -tulpn | grep 7777
+
+fix locales
+
+  sudo dpkg-reconfigure locales
