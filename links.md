@@ -8,7 +8,7 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 
 ## Repositories
 
-[dotty] (https://github.com/lampepfl/dotty)
+[dotty](https://github.com/lampepfl/dotty)
 
 [scaloid](https://github.com/pocorall/scaloid)
 
@@ -50,6 +50,7 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 [reactjs vs angular](http://matthiasnehlsen.com/blog/2014/03/31/birdwatch-with-reactjs/)
 
 [websockets with akka-http](http://blog.scalac.io/2015/07/30/websockets-server-with-akka-http.html)
+
 ### Tools
 
 [emmet](www.emmet.io)
@@ -72,7 +73,7 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 
 ##### JS
 
-[Elevator] (http://tholman.com/elevator.js/)
+[Elevator](http://tholman.com/elevator.js/)
 
 [webaudio](http://webaudioapi.com)
 
@@ -80,3 +81,4 @@ Some mildly sorted bunch of links I came across and decided to revisit them.
 
 [safari webaudio](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html)
 
+[cytoscape](http://js.cytoscape.org/)

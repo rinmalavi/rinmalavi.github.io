@@ -2,11 +2,11 @@
 layout: default
 ---
 
+2016 - Helix d.o.o.
+
 2015 - Mentat Labs d.o.o
 
-2012 - now Element d.o.o.
-
-2011 - Working on a mental expansions trough an accessible universal presence ... well I was unemployed mostly.
+2012 - Element d.o.o.
 
 2010 - Graduated with Masters degree in Mathematics, course Computing, at the Faculty of Science and Mathematics (PMF-MO, Zagreb).
 

@@ -35,6 +35,12 @@ what is using port 7777
 
     sudo netstat -tulpn | grep 7777
 
+gnome applications location
+
+    ~/.local/share/applications/
+    /user/share/applications
+
 fix locales
 
-  sudo dpkg-reconfigure locales
+    sudo dpkg-reconfigure locales
+
