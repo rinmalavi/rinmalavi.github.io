@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+2017 - ATRON electronic GmbH
 
 2016 - Helix d.o.o.
 
