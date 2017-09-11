@@ -92,8 +92,8 @@ To perform a single test call
 Scripted will now
 
  - `publishLocal` your plugin
- - resolve it in a project it copied to `/tmp/sbt-<some randoms>`
- - run a task you called in `test` file.
+ - resolve it in a project copied to `/tmp/sbt-<some randoms>`
+ - run a `test` script
 
 If your task returns some values you could call it from the task you defined in the `build.sbt` and `assert` the returned value with an expected result.
 If your project depends on a library you are developing as a subproject, you have to publish it too. To do so just add it to the `publishLocal` task in your plugin project.
