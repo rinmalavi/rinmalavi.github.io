@@ -23,17 +23,17 @@ that's it, good job there.
 Add to the plugins (`project/plugins.sbt`)
 
 ```scala
-libraryDependencies <+= 
+libraryDependencies <+=
     sbtVersion("org.scala-sbt" % "scripted-plugin" % _)
 ```
 
 Add to your project settings:
 
 ```scala
-ScriptedPlugin.scriptedLaunchOpts := { 
+ScriptedPlugin.scriptedLaunchOpts := {
   ScriptedPlugin.scriptedLaunchOpts.value ++
-  Seq("-Xmx1024M", 
-      "-XX:MaxPermSize=256M", 
+  Seq("-Xmx1024M",
+      "-XX:MaxPermSize=256M",
       "-Dplugin.version=" + version.value
   )
 }
@@ -59,7 +59,7 @@ Only 3 files need to be explained here:
 1. `plugin.sbt` containing
 
     ```scala
-    addSbtPlugin("your.groupId" % "your-app-name" % 
+    addSbtPlugin("your.groupId" % "your-app-name" %
         System.getProperty("plugin.version"))
     ```
 
@@ -80,21 +80,26 @@ Only 3 files need to be explained here:
 
 There, testing is easy, we acutely wrote a task along the way, fun times!
 
-Call all tests with 
+Call all tests with
 
     > scripted
 
-To perform a single test call 
+To perform a single test call
 
     > scripted test_group/test_n
 
 
-Scripted will now `publishLocal` your plugin and resolve it in a project it copied to `/tmp/sbt-<some randoms>` and then run a task you called in `test` file. 
+Scripted will now
+
+ - `publishLocal` your plugin
+ - resolve it in a project it copied to `/tmp/sbt-<some randoms>`
+ - run a task you called in `test` file.
+
 If your task returns some values you could call it from the task you defined in the `build.sbt` and `assert` the returned value with an expected result.
 If your project depends on a library you are developing as a subproject, you have to publish it too. To do so just add it to the `publishLocal` task in your plugin project.
 
 ```scala
-publishLocal <<= publishLocal dependsOn( 
+publishLocal <<= publishLocal dependsOn(
     publishLocal in yourLibraryProjectRef )
 ```
 
@@ -102,14 +107,14 @@ publishLocal <<= publishLocal dependsOn(
 Similarly for the tests, test resources in the library projects, only this is a path, just add them to the classpath with something like
 
 ```scala
-unmanagedResourceDirectories in Test <++= 
+unmanagedResourceDirectories in Test <++=
     unmanagedResourceDirectories in Test in <subproject>
 ```
 
 Then if you are using some test resources or mocks you need to load them with your plugin to the test project. So your test `plugin.sbt` file now looks like this:
 
 ```scala
-addSbtPlugin("your.groupId" % "your-app-name" % 
+addSbtPlugin("your.groupId" % "your-app-name" %
     System.getProperty("plugin.version"))
         classifier "tests" classifier "")
 ```
@@ -117,4 +122,3 @@ addSbtPlugin("your.groupId" % "your-app-name" %
 #### Links:
 
 [Eugine Yokota on testing](http://eed3si9n.com/testing-sbt-plugins)
-
